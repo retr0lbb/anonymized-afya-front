@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+/* ── Base resets & sensible defaults ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Prevent iOS text-size-adjust issues */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  /* Smooth scroll */
+  scroll-behavior: smooth;
+  /* Better text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent images from overflowing their containers */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Custom utility classes ── */
+
+/* Shadow utility referenced by multiple components */
+.big-shaddow {
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.15),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.good-inner-shaddow {
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.08),
+    0 10px 25px -5px rgba(0, 0, 0, 0.15);
 }

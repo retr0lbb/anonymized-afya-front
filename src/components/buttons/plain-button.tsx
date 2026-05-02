@@ -8,7 +8,7 @@ interface ButtonProps extends ComponentProps<"button"> {
 const variantHandler = {
   base: {
     className:
-      "rounded-xl font-nunito py-3 lg:py-6 px-7 lg:px-14 text-2xl lg:text-5xl font-bold transition-all active:opacity-70",
+      "rounded-xl font-nunito py-3 lg:py-6 px-7 lg:px-14 text-xl sm:text-2xl lg:text-5xl font-bold transition-all active:opacity-70",
   },
   plain: {
     className: "border border-zinc-400 bg-zinc-200 text-rose-600",

@@ -19,7 +19,7 @@ export function BlankPage({ children, className }: BlankPageProps) {
         backgroundSize: "cover",
       }}
       className={twMerge(
-        "w-full min-h-screen flex flex-col justify-center py-22 px-16",
+        "w-full min-h-screen flex flex-col justify-center py-10 px-6 sm:py-14 sm:px-10 md:py-16 md:px-12 lg:py-20 lg:px-16",
         className
       )}
     >

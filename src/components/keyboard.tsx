@@ -31,7 +31,7 @@ function Keys({ letter, onKeyPressed }: KeysProps) {
     <button
       type="button"
       onClick={() => onKeyPressed(letter)}
-      className="size-20 w-full rounded-2xl bg-zinc-300 text-2xl shadow-sm border border-zinc-500 font-bold"
+      className="size-12 sm:size-16 md:size-20 w-full rounded-xl sm:rounded-2xl bg-zinc-300 text-base sm:text-xl md:text-2xl shadow-sm border border-zinc-500 font-bold"
     >
       {letter}
     </button>
@@ -45,7 +45,7 @@ interface RowsProps {
 
 function Rows({ row, onKeyPress }: RowsProps) {
   return (
-    <li className="w-full flex items-center justify-evenly gap-2">
+    <li className="w-full flex items-center justify-evenly gap-1 sm:gap-2">
       {row.map(item => (
         <Keys letter={item} key={item} onKeyPressed={onKeyPress} />
       ))}
@@ -108,7 +108,7 @@ function handleKeyPress(key: string) {
     setPendingAccent(null);
     setIsShifted(false);
   }
-  // Qualquer outra tecla (inclui “.com”)
+  // Qualquer outra tecla (inclui ".com")
   else {
     insert = isShifted ? key : key.toLocaleLowerCase();
     setPendingAccent(null);
@@ -129,9 +129,9 @@ function handleKeyPress(key: string) {
 
   return (
     <div
-      className={`absolute flex bottom-0 left-0 w-full p-5 bg-zinc-200 transition-all ${activeField === null ? "translate-y-[100%] hidden" : "translate-y-0 block"}`}
+      className={`absolute flex bottom-0 left-0 w-full p-2 sm:p-3 md:p-5 bg-zinc-200 transition-all ${activeField === null ? "translate-y-[100%] hidden" : "translate-y-0 block"}`}
     >
-      <ul className="w-full flex flex-col list-none gap-2">
+      <ul className="w-full flex flex-col list-none gap-1 sm:gap-2">
         {keyboardLayout.map((rows, index) => (
           <Rows
             onKeyPress={handleKeyPress}

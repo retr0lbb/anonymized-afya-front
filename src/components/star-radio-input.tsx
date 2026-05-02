@@ -25,7 +25,7 @@ export function StarRadioInput({ setRating, rating }: StarRadioInputProps) {
               }}
             />
             <Star
-              className="size-32 text-zinc-200"
+              className="size-16 sm:size-20 md:size-28 lg:size-32 text-zinc-200"
               fill={rating >= curretRating ? "#e4e4e7" : "transparent"}
             />
           </label>

@@ -17,7 +17,7 @@ function Checkbox({
     <div
       data-selected={checked}
       className={`relative group flex 
-      w-full ${extended && "h-full"} rounded-4xl pt-5 justify-center bg-zinc-50 data-[selected=true]:bg-rose-500 px-10 gap-4 big-shaddow`}
+      w-full ${extended && "h-full"} rounded-3xl sm:rounded-4xl pt-3 sm:pt-5 justify-center bg-zinc-50 data-[selected=true]:bg-rose-500 px-4 sm:px-6 md:px-10 gap-2 sm:gap-4 big-shaddow`}
     >
       <input
         type="checkbox"
@@ -36,7 +36,7 @@ function Head({ children }: HeadProps) {
   return (
     <div
       className="w-full
-    flex-col pt-5 flex flex-nowrap group-data-[selected=true]:text-zinc-200 overflow-hidden items-baseline gap-4"
+    flex-col pt-3 sm:pt-5 flex flex-nowrap group-data-[selected=true]:text-zinc-200 overflow-hidden items-baseline gap-2 sm:gap-4"
     >
       {children}
     </div>
@@ -51,12 +51,12 @@ interface BodyProps {
 }
 function Body({ children, description, title, isBig = false }: BodyProps) {
   return (
-    <div className="flex flex-1 relative overflow-hidden justify-between w-full gap-4">
+    <div className="flex flex-1 relative overflow-hidden justify-between w-full gap-2 sm:gap-4">
       <div
-        className={`flex flex-col ${isBig ? "justify-start" : "justify-center"} gap-4`}
+        className={`flex flex-col ${isBig ? "justify-start" : "justify-center"} gap-2 sm:gap-4`}
       >
         <h1
-          className={`${isBig ? "text-5xl" : "text-4xl"} ${isBig ? "pt-5" : ""} text-rose-600 group-data-[selected=true]:text-zinc-200 text-left font-nunito-italic font-extrabold`}
+          className={`${isBig ? "text-3xl sm:text-4xl md:text-5xl" : "text-2xl sm:text-3xl md:text-4xl"} ${isBig ? "pt-3 sm:pt-5" : ""} text-rose-600 group-data-[selected=true]:text-zinc-200 text-left font-nunito-italic font-extrabold`}
         >
           {title.split("<br/>").map((line, index) => {
             return (
@@ -69,7 +69,7 @@ function Body({ children, description, title, isBig = false }: BodyProps) {
           })}
         </h1>
         <p
-          className={`text-zinc-900 group-data-[selected=true]:text-zinc-300 ${isBig ? "text-4xl font-normal" : "text-4xl font-semibold"} text-3xl font-nunito pb-7`}
+          className={`text-zinc-900 group-data-[selected=true]:text-zinc-300 ${isBig ? "text-2xl sm:text-3xl md:text-4xl font-normal" : "text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold"} font-nunito pb-4 sm:pb-7`}
         >
           {description.split("<br/>").map((line, index) => {
             return (
